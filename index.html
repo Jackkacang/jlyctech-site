@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JLYC TECH</title>
+<meta name="description" content="JLYC TECH — a Malaysian software studio making simple, fun apps. Maker of Upfolio.">
+<meta name="theme-color" content="#16112E">
+<link rel="icon" href="upfolio.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+<style>
+/* Same night sky as upfolio.my; the studio page stays calm: one gold wordmark, one app card, one fact sheet. */
+:root{
+  --sky1:#16112E; --sky2:#0B0920; --panel:#231B4B; --line:rgba(245,196,81,.28);
+  --gold:#F5C451; --text:#F4EEFF; --muted:#CFC6F5; --exp2:#39C6FF;
+  --display:"Lilita One","Arial Rounded MT Bold",sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--sky2)}
+body{margin:0;color:var(--text);font:16px/1.65 var(--body);min-height:100vh;
+  background:radial-gradient(1000px 520px at 80% -10%,rgba(124,92,255,.26),transparent 60%),linear-gradient(180deg,var(--sky1),var(--sky2) 75%)}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+header{padding-block:28px 8px}
+.mark{font-family:var(--display);font-size:30px;letter-spacing:2px;color:var(--gold);text-decoration:none;text-shadow:0 3px 0 #6b4a10}
+.hero{padding-block:48px 40px}
+.eyebrow{font:600 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--exp2);margin:0 0 12px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,5.6vw,54px);line-height:1.12;margin:0;text-wrap:balance}
+.zh{color:var(--muted);font-size:18px;margin:14px 0 0}
+h2{font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:44px 0 14px}
+.app{display:flex;gap:20px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px}
+.app>div{min-width:0}
+.app img{width:84px;height:84px;border-radius:20px;border:2px solid var(--gold);box-shadow:0 0 30px rgba(245,196,81,.3);flex:none}
+.app h3{font-family:var(--display);font-weight:400;font-size:26px;color:var(--gold);margin:0}
+.app p{margin:8px 0 0;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:15px}
+.facts{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.facts td{padding:14px 20px;border-bottom:1px solid rgba(245,196,81,.14);vertical-align:top}
+.facts tr:last-child td{border-bottom:0}
+.facts td:first-child{color:var(--muted);width:44%;font-size:15px}
+.facts td:last-child{font-variant-numeric:tabular-nums}
+footer{margin-top:48px;padding-block:24px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:560px){
+  .app{flex-direction:column}
+  .facts td{display:block;width:auto!important;padding:10px 18px}
+  .facts td:first-child{padding-bottom:0;border-bottom:0}
+}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap">
+<header><a class="mark" href="index.html">JLYC TECH</a></header>
+
+<div class="hero">
+  <p class="eyebrow">Software studio · Malaysia</p>
+  <h1>We make simple, fun apps that help people with everyday life.</h1>
+  <p class="zh">马来西亚软件工作室 · 我们开发简单、有趣、帮助日常生活的应用程序。</p>
+</div>
+
+<h2>Our apps · 我们的应用</h2>
+<div class="app">
+  <img src="upfolio.png" alt="Upfolio app icon">
+  <div>
+    <h3>Upfolio</h3>
+    <p>A role-playing money tracker: steady logging raises your level, your savings power your attack, and staying within budget keeps your health full.</p>
+    <p>RPG 冒险风格的记账应用：记账越有纪律等级越高，资产越多攻击力越强，守住预算血量就满。</p>
+    <div class="links">
+      <a href="https://upfolio.my">upfolio.my</a>
+      <a href="https://upfolio.my/privacy.html">Privacy 隐私政策</a>
+      <a href="https://upfolio.my/terms.html">Terms 使用条款</a>
+    </div>
+  </div>
+</div>
+
+<h2>Company · 公司资料</h2>
+<table class="facts">
+  <tr><td>Business name 商号</td><td>JLYC TECH</td></tr>
+  <tr><td>Registration no. 注册号码 (SSM)</td><td>CT0170994-D</td></tr>
+  <tr><td>Country 国家</td><td>Malaysia 马来西亚</td></tr>
+  <tr><td>Email 电邮</td><td><a href="mailto:customer@upfolio.my">customer@upfolio.my</a></td></tr>
+</table>
+
+<footer>© 2026 JLYC TECH (CT0170994-D). All rights reserved.</footer>
+</div>
+<script>
+(function(){var c=document.getElementById('stars'),x=c.getContext('2d');
+function draw(){var w=c.width=innerWidth,h=c.height=innerHeight,s=11;
+function r(){s=(s*1103515245+12345)&0x7fffffff;return s/0x7fffffff}
+x.fillStyle='rgba(255,255,255,.35)';for(var i=0;i<100;i++){x.beginPath();x.arc(r()*w,r()*h*.8,r()*1.3+.3,0,7);x.fill()}}
+draw();addEventListener('resize',draw);})();
+</script>
+</body>
+</html>
